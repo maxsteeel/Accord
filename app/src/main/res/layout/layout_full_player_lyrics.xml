@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-    <uk.akane.accord.ui.components.FadingVerticalEdgeLayout
+    <uk.max.accord.ui.components.FadingVerticalEdgeLayout
         android:id="@+id/fading"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,18 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/full_player_tool_bar">
 
-        <uk.akane.accord.ui.components.scroll.FastScrollerNestedScrollView
+        <uk.max.accord.ui.components.scroll.FastScrollerNestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <uk.akane.accord.ui.components.lyrics.LyricsView
+            <uk.max.accord.ui.components.lyrics.LyricsView
                 android:id="@+id/lyrics_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-        </uk.akane.accord.ui.components.scroll.FastScrollerNestedScrollView>
+        </uk.max.accord.ui.components.scroll.FastScrollerNestedScrollView>
 
-    </uk.akane.accord.ui.components.FadingVerticalEdgeLayout>
+    </uk.max.accord.ui.components.FadingVerticalEdgeLayout>
 
     <!-- Show this layout when it's ready for production env-->
     <Button

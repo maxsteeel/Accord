@@ -264,7 +264,7 @@
         app:layout_constraintHorizontal_bias="0.80"
         />
 
-    <uk.akane.accord.ui.components.player.FullPlayerToolbar
+    <uk.max.accord.ui.components.player.FullPlayerToolbar
         android:id="@+id/full_player_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

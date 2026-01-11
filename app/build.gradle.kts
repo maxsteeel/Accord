@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "uk.akane.accord"
+    namespace = "uk.max.accord"
     compileSdk = 36
 
     androidResources {
@@ -17,7 +17,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "uk.akane.accord"
+        applicationId = "uk.max.accord"
         minSdk = 31
         targetSdk = 36
         versionCode = 1
@@ -39,8 +39,25 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            val keystoreFileProp = project.findProperty("KEYSTORE_FILE") as String?
+            val keystorePasswordProp = project.findProperty("KEYSTORE_PASSWORD") as String?
+            val keyAliasProp = project.findProperty("KEY_ALIAS") as String?
+            val keyPasswordProp = project.findProperty("KEY_PASSWORD") as String?
+
+            if (keystoreFileProp != null && keystorePasswordProp != null && keyAliasProp != null && keyPasswordProp != null) {
+                storeFile = file(keystoreFileProp)
+                storePassword = keystorePasswordProp
+                keyAlias = keyAliasProp
+                keyPassword = keyPasswordProp
+            }
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(

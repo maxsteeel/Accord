@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <uk.akane.accord.ui.components.NavigationBar
+    <uk.max.accord.ui.components.NavigationBar
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:includeFontPadding="false"
         />
 
-    <uk.akane.accord.ui.components.BannerView
+    <uk.max.accord.ui.components.BannerView
         android:layout_width="276dp"
         android:layout_height="360dp"
         android:layout_marginStart="22dp"

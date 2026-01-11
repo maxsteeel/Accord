@@ -28,7 +28,7 @@
         <item name="android:letterSpacing">0.01</item>
     </style>
     <style name="Widget.Accord.BottomNavigation.BottomSheet">
-        <item name="layout_behavior">uk.akane.accord.logic.ui.CustomBottomSheetBehavior</item>
+        <item name="layout_behavior">uk.max.accord.logic.ui.CustomBottomSheetBehavior</item>
         <item name="behavior_peekHeight">108dp</item>
     </style>
     <style name="Widget.Accord.BottomNavigation.BottomSheet.Preview"/>

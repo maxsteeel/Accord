@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <uk.akane.accord.ui.components.NavigationBar
+    <uk.max.accord.ui.components.NavigationBar
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,6 +22,6 @@
 
         <include layout="@layout/layout_search_bar" />
 
-    </uk.akane.accord.ui.components.NavigationBar>
+    </uk.max.accord.ui.components.NavigationBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

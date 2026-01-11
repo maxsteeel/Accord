@@ -1,0 +1,53 @@
+package uk.max.accord.ui.fragments
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import uk.max.accord.R
+import uk.max.accord.ui.adapters.BrowseAdapter
+import uk.max.accord.ui.components.NavigationBar
+
+class BrowseFragment: Fragment() {
+
+    private lateinit var navigationBar: NavigationBar
+    private lateinit var recyclerView: RecyclerView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val rootView = inflater.inflate(R.layout.fragment_browse, container, false)
+
+        navigationBar = rootView.findViewById(R.id.navigation_bar)
+        recyclerView = rootView.findViewById(R.id.recyclerView)
+
+        ViewCompat.setOnApplyWindowInsetsListener(navigationBar) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(
+                v.paddingLeft,
+                systemBars.top,
+                v.paddingRight,
+                v.paddingBottom
+            )
+            insets
+        }
+
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = BrowseAdapter(requireContext())
+
+        navigationBar.attach(recyclerView)
+        return rootView
+    }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        navigationBar.onVisibilityChangedFromFragment(hidden)
+    }
+}
