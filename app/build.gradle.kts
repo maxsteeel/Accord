@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId = "uk.max.accord"
-        minSdk = 31
+        minSdk = 29
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"

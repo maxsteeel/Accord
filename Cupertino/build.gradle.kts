@@ -10,7 +10,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        minSdk = 31
+        minSdk = 29
         consumerProguardFiles("Cupertino/Cupertino/consumer-rules.pro")
     }
 
