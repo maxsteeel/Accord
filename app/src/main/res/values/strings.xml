@@ -4,6 +4,8 @@
     <string name="bottom_nav_library">Library</string>
     <string name="bottom_nav_browse">Browse</string>
     <string name="bottom_nav_home">Home</string>
+    <string name="fragment_home_title">Top Picks for You</string>
+    <string name="fragment_home_subtitle">Made for You</string>
     <string name="default_track">Not playing</string>
     <string name="default_artist" translatable="false"></string>
     <string name="default_duration" translatable="false">–:––</string>
